@@ -31,7 +31,6 @@ CoursesPage.propTypes = {
 
 
 function mapStateToProps(state, ownProps){
-  debugger;
   return {
     courses: state.courses
   };
@@ -40,7 +39,7 @@ function mapStateToProps(state, ownProps){
 function mapDispatchToProps(dispatch){
   return {
     actions: bindActionCreators(courseActions, dispatch)
-  }
+  };
 }
 
 
