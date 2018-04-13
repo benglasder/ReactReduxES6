@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as courseActions from '../../actions/courseActions';
 
 class CoursesPage extends React.Component {
+  // initialize state
   constructor(props, context) {
     super(props, context);
 
@@ -16,6 +17,7 @@ class CoursesPage extends React.Component {
 
   }
 
+  // child functions called by render
   onTitleChange(event) {
     const course = this.state.course;
     course.title = event.target.value;
@@ -48,6 +50,7 @@ class CoursesPage extends React.Component {
   }
 }
 
+// Prop Type Validation
 CoursesPage.propTypes = {
   courses: PropTypes.array.isRequired,
   actions: PropTypes.object.isRequired
