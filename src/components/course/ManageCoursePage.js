@@ -116,7 +116,7 @@ function mapStateToProps(state, ownProps) {
 
   return {
     course: course,
-    authors: authorsFormattedForDropdown
+    authors: authorsFormattedForDropdown(state.authors)
   };
 }
 
