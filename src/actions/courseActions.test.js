@@ -3,7 +3,7 @@ import * as courseActions from './courseActions';
 import * as types from './actionTypes';
 
 import thunk from 'redux-thunk';
-import nock from 'nock';
+import nock from 'nock'; // for mocking http calls
 import configureMockStore from 'redux-mock-store';
 
 // Test a sync action
@@ -35,7 +35,7 @@ describe('Async Actions', () => {
   });
 
   it('should create BEGIN_AJAX_CALL and LOAD_COURSES_SUCCESS when loading courses', (done) => {
-    // Here's an example call to nock.
+    // Here's an example call to nock. todo use this when we have a real API we are consuming
     // nock('http://example.com/')
     //   .get('/courses')
     //   .reply(200, { body: { course: [{ id: 1, firstName: 'Cory', lastName: 'House'}] }});
